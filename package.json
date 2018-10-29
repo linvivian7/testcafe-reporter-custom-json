@@ -1,5 +1,5 @@
 {
-  "name": "custom-json",
+  "name": "testcafe-reporter-custom-json",
   "version": "1.0.0",
   "description": "custom-json TestCafe reporter plugin.",
   "repository": "https://github.com/linvivian7/testcafe-reporter-custom-json",
