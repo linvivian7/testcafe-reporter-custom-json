@@ -10,6 +10,7 @@ export default function() {
     },
 
     reportTaskStart(startTime, userAgents, testCount) {
+      this.report.startTime = startTime;
       this.report.total = testCount;
     },
 
@@ -30,6 +31,11 @@ export default function() {
 
     reportTaskDone(endTime, passed) {
       this.report.passed = passed;
+      this.report.endTime = endTime;
+      this.report.duration = (
+        (endTime - this.report.startTime) /
+        60000
+      ).toFixed(2);
       this.report.failedFixtures = this.report.failedFixtures.filter(
         ({ tests }) => tests.length > 0
       );
